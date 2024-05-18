@@ -43,10 +43,10 @@ public class Rental {
 
 	@ManyToMany(targetEntity = Volume.class)
 	@JoinTable(
-			name = "rental_contents",
+			name = "rental_volumes",
 			joinColumns = @JoinColumn(name = "rental_id"),
 			inverseJoinColumns = @JoinColumn(name = "volume_id"))
-	Set<Volume> contents;
+	Set<Volume> volumes;
 	
 
 	public int getId(){return id;}
@@ -64,7 +64,7 @@ public class Rental {
 	public Reader getReader(){return reader;}
 	public void setReader(Reader reader){this.reader = reader;}
 
-	public Set<Volume> getContents(){return contents;}
-	public void setContents(Set<Volume> contents){this.contents = contents;}
+	public Set<Volume> getVolumes(){return volumes;}
+	public void setVolumes(Set<Volume> volumes){this.volumes = volumes;}
 
 }
