@@ -12,7 +12,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import antlr.collections.List;
+//import antlr.collections.List;
+import java.util.Collections;
 
 @Entity
 @Table(name="books")

@@ -11,7 +11,8 @@ import javax.persistence.Persistence;
 
 //import org.hibernate.mapping.Set;
 
-import antlr.collections.List;
+//import antlr.collections.List;
+import java.util.Collections;
 import pl.kurs.komis.entities.Car;
 import pl.kurs.library.entity.Book;
 import pl.kurs.library.entity.Rental;
@@ -21,7 +22,8 @@ import pl.kurs.library.entity.Volume.Conditionn;
 
 public class Test {
 public static void main(String[] args) {
-	EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("komis");
+	//EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("komis");
+	EntityManagerFactory managerFactory = new Persistence().createEntityManagerFactory("komis");
 	EntityManager manager = managerFactory.createEntityManager(); 
 	manager.getTransaction().begin();
 	

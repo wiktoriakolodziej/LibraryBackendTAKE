@@ -19,7 +19,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import antlr.collections.List;
+//import antlr.collections.List;
+import java.util.Collections;
 
 @Entity
 @Table(name="rentals")
