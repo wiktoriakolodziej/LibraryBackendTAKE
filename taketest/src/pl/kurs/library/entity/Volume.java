@@ -5,6 +5,7 @@ import java.util.HashSet;
 //import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -16,6 +17,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 //import antlr.collections.List;
@@ -32,9 +35,11 @@ public class Volume {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
+	@Column(updatable = false, nullable = false)
 	int yearOfPublication;
 	@Enumerated(EnumType.STRING)
 	BookCover bookCover;
+	@Column(updatable = false, nullable = false)
 	int pagess;
 	@Enumerated(EnumType.STRING)
 	Conditionn conditionn;

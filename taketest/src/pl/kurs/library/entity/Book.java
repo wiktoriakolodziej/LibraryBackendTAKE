@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,8 +24,11 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
+	@Column(updatable = false, nullable = false)
 	String title;
+	@Column(updatable = false, nullable = false)
 	String authorName;
+	@Column(updatable = false, nullable = false)
 	String authorSurname;
 	int version;
 	String description;
