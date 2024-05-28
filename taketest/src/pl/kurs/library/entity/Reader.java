@@ -38,6 +38,7 @@ public class Reader {
 	@OneToMany(mappedBy = "reader")
 	Set<Rental> rentals;
 	
+	
 	public int getId(){return id;}
 	public void setId(int id){this.id = id;}
 	
@@ -55,6 +56,7 @@ public class Reader {
 	
 	public float getPenalty() {return penalty;}
 	public void setPenalty(float penalty) { this.penalty = penalty;}
+
 	 
 	    
 }

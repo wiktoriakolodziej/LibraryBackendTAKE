@@ -46,6 +46,8 @@ public class Volume {
 	@ManyToMany(mappedBy = "volumes")
 	Set<Rental> rentals;
 	
+	private Set<Reader> readers;
+	
 	public int getId(){return id;}
 	public void setId(int id){this.id = id;}
 	
@@ -66,5 +68,8 @@ public class Volume {
 	
 	public Set<Rental> getRentals(){return rentals;}
 	public void setRentals(Set<Rental> rentals){this.rentals = rentals;} 
+	
+	public Set<Reader> getReaders(){return readers;}
+	public void setReaders(Set<Reader> readers){this.readers = readers;} 
 
 }

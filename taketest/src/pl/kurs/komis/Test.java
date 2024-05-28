@@ -15,6 +15,7 @@ import javax.persistence.Persistence;
 import java.util.Collections;
 import pl.kurs.komis.entities.Car;
 import pl.kurs.library.entity.Book;
+import pl.kurs.library.entity.Reader;
 import pl.kurs.library.entity.Rental;
 import pl.kurs.library.entity.Volume;
 import pl.kurs.library.entity.Volume.BookCover;
@@ -73,6 +74,26 @@ public static void main(String[] args) {
 	manager.persist(volume2); 
 	volumes.add(volume2);
 	
+	Set<Reader> readers = new HashSet<Reader>();
+	Reader reader1 = new Reader();
+    reader1.setReaderName("Jan");
+    reader1.setReaderSurname("Kowalski");
+    reader1.setBirthDate(Date.valueOf("1990-05-15"));
+    reader1.setJoiningDate(Date.valueOf("2020-01-01"));
+    reader1.setPenalty(0.0f);
+    manager.persist(reader1);
+    
+    Reader reader2 = new Reader();
+    reader2.setReaderName("Anna");
+    reader2.setReaderSurname("Nowak");
+    reader2.setBirthDate(Date.valueOf("1985-10-20"));
+    reader2.setJoiningDate(Date.valueOf("2018-03-15"));
+    reader2.setPenalty(5.0f);
+    manager.persist(reader2);
+  
+    readers.add(reader1);
+    readers.add(reader2);
+    
 	rental.setVolumes(volumes);
 	rental2.setVolumes(volumes);
 	volume.setRentals(rentals);
